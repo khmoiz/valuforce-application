@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name = "viewport" content="width=device-width, initial-scale=1">
+
+    <style>
+        body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: black;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* Add padding to containers */
+.container {
+  padding: 16px;
+  background-color: white;
+}
+
+/* Full-width input fields */
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+}
+
+input[type=text]:focus, input[type=password]:focus, input[type=number] {
+  background-color: #ddd;
+  outline: none;
+  width: 100%;
+  height: 45px;
+}
+
+/* Overwrite default styles of hr */
+hr {
+  border: 1px solid #f1f1f1;
+  margin-bottom: 25px;
+}
+
+/* Set a style for the submit button */
+.registerbtn {
+  background-color: #4B74B0;
+  color: white;
+  padding: 16px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+}
+
+.registerbtn:hover {
+  opacity: 1;
+}
+
+/* Add a blue text color to links */
+a {
+  color: dodgerblue;
+}
+
+/* Set a grey background color and center the text of the "sign in" section */
+.signin {
+  background-color: #f1f1f1;
+  text-align: center;
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  overflow: auto;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown a:hover {background-color: #ddd;}
+
+.show {display: block;
+}
+
+</style>
+</head>
+<body>
+<form action="C:\Users\Arnav Kaushal\Desktop\action_page.php" method="GET">
+    <div class="container">
+        <h1><center>Book Appointment</center></h1>
+        <p><h4><center>Please fill in this form to book an appointment</center></h4></p>
+        <hr>
+
+        <label for="ref_no"><b>Reference Number</b></label>
+        <input type="text" placeholder="FCT Reference Number" name="ref_no" required>
+
+        <h3>&nbsp;</h3>
+        <label><h2><b>Subject Property Address :</b></h2></label><br>
+        <h6>&nbsp;</h6>
+
+        <label for="unit_no"><b>Unit Number</b></label>
+        <input type="text" placeholder="Enter Unit Number" name="unit_no" required>
+
+        <label for="street_no"><b>Street Number</b></label>
+        <input type="text" placeholder="Enter Street Number" name="street_no" required>
+
+        <label for="street_name"><b>Street Name</b></label>
+        <input type="text" placeholder="Enter Street Name" name="street_name" required>
+
+        <label for="street_suffix"><b>Street Suffix</b></label>
+        <input type="text" placeholder="Enter Street Suffix" name="street_suffix" required>
+
+        <label for="munic_name"><b>Municipality</b></label>
+        <input type="text" placeholder="Enter Municipality Name" name="munic_name" required>
+
+        <label for="postal_code"><b>Postal Code</b></label>
+        <input type="text" placeholder="Enter Postal Code" name="postal_code" required>
+
+        <br>
+        <br>
+
+        <label for="province"><b>Province</b></label>
+        <select name="Province" class="dropdown-content">
+            <option value="AB">   AB    </option>
+            <option value="BC">BC</option>
+            <option value="MB">MB</option>
+            <option value="NB">NB</option>
+            <option value="NL">NL</option>
+            <option value="NS">NS</option>
+            <option value="NT">NT</option>
+            <option value="NU">NU</option>
+            <option value="ON">ON</option>
+            <option value="PE">PE</option>
+            <option value="QC">QC</option>
+            <option value="SK">SK</option>
+            <option value="YT">YT</option>
+        </select>
+
+        <br>
+        <br>
+        <br>
+        <br>
+
+        <label for="service_type"><b>Service</b></label>
+        <select name="Service" class="dropdown-content">
+            <option value="drive_by_pic">   Drive by Photo : 45 CAD   </option>
+        </select>
+
+        <br>
+        <h6>&nbsp;</h6>
+
+        <label for="legal_desc"><b>Legal Description</b></label>
+        <input type="text" placeholder="Legal Description" name="legal_desc" required>
+
+        <label for="client_last_name"><b>Client Last Name</b></label>
+        <input type="text" placeholder="Enter Client's last name" name="client_last_name" required>
+
+        <h4>&nbsp;</h4>
+
+
+        <label><b><h2>Ordered By :</h2></b></label>
+
+        <br>
+        <h6>&nbsp;</h6>
+
+
+        <label for="first_name"><b>First Name</b></label>
+        <input type="text" placeholder="Enter First Name" name="first_name" required>
+
+        <label for="last_name"><b>Last Name</b></label>
+        <input type="text" placeholder="Enter Last Name" name="last_name" required>
+
+        <label for="company"><b>Company</b></label>
+        <input type="text" placeholder="Enter Company Name" name="company" required>
+
+        <label for="p_no"><b>Phone Number</b></label>
+        <input type="number" placeholder="Enter Phone Number" name="p_no" required>
+
+        <br>
+        <br>
+        <br>
+
+        <label for="email_addr"><b>Email</b></label>
+        <input type="text" placeholder="Enter Email" name="email_addr" required>
+
+        <label for="confirm_email_addr"><b>Confirm Email</b></label>
+        <input type="text" placeholder="Enter email again" name="confirm_email_addr" required>
+
+        <label for="special_instr"><b>Special Instructions</b></label>
+        <input type="text" placeholder="Specify instructions..." name="special_addr" required>
+
+        <label for="pic_email_addr"><b>Email for Photo Delivery (if different than above)</b></label>
+        <input type="text" placeholder="Enter Email" name="email_addr">
+
+        <button type="submit" class="registerbtn"><h3>Add to Cart</h3></button>
+    </div>
+
+</form>
+
+</body>
+</html>

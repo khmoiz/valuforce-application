@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="./jquery-3.4.0.min.js"></script>
+    <title>Details Page</title>
+</head>
+<body >
+
+<!--NAVIGATION BAR-->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="#">
+        <img src="./assets/valuForceLogo.png" width="178" height="100" class="d-inline-block align-top" alt="http://valueforce.thelearnapp.com/wp-content/uploads/2018/08/Logo_Colour_white-178x100.png">
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav">
+            <li class="navbar-brand ">
+                <a class="nav-link" href="http://valueforce.thelearnapp.com/">Home </a>
+            </li>
+            <li class="navbar-brand">
+                <a class="nav-link" href="http://valueforce.thelearnapp.com/about-us">About Us</a>
+            </li>
+            <li class="navbar-brand">
+                <a class="nav-link" href="http://valueforce.thelearnapp.com/contact-us">Contact Us</a>
+            </li>
+
+        </ul>
+    </div>
+</nav>
+
+    <div class="text-center jumbotron">
+        <h1 class="display-4">Thank You!</h1>
+        <br>
+        A confirmation email has been sent to:<h4 class="lead" id="email_val"></h4>
+        <br>
+        <h4 class="lead" >We will be coming for the inspection on :</h4>
+        <br>
+        <h4 class="lead" id="date_time_val"></h4>
+
+    </div>
+
+<script>
+ var appendClientData = function () {
+            var thanks = $.parseJSON(window.localStorage.getItem("thanks_data"));
+            if (thanks !== null) {
+                console.log(thanks)
+                $("#email_val").text(thanks["date-time"]);
+                $("#date_time_val").text(thanks["email"]);
+            } else {
+                console.log("no client data found from local storage, please go fill out the detail request form!")
+            }
+        };
+ appendClientData();
+</script>
+</body>
+</html>
+
