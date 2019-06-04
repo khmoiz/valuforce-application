@@ -76,7 +76,7 @@
             var thanks = $.parseJSON(window.localStorage.getItem("thanks_data"));
             if (thanks !== null) {
                 console.log(thanks)
-                $("#date_time_val").text(thanks["date-time"]);
+                $("#date_time_val").text(thanks["date_time"]);
                 $("#email_val").text(thanks["email"]);
                 $("#reference_val").text(thanks["reference"])
             } else {
