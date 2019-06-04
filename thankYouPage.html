@@ -9,14 +9,18 @@
     <script src="./jquery-3.4.0.min.js"></script>
     <title>Details Page</title>
 </head>
-<body >
+
+
+<body class=" ">
 
 <!--NAVIGATION BAR-->
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <a class="navbar-brand" href="#">
-        <img src="./assets/valuForceLogo.png" width="178" height="100" class="d-inline-block align-top" alt="http://valueforce.thelearnapp.com/wp-content/uploads/2018/08/Logo_Colour_white-178x100.png">
+        <img src="./assets/valuForceLogo.png" width="178" height="100" class="d-inline-block align-top"
+             alt="http://valueforce.thelearnapp.com/wp-content/uploads/2018/08/Logo_Colour_white-178x100.png">
     </a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+            aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNavDropdown">
@@ -35,29 +39,52 @@
     </div>
 </nav>
 
-    <div class="text-center jumbotron">
-        <h1 class="display-4">Thank You!</h1>
-        <br>
-        A confirmation email has been sent to:<h4 class="lead" id="email_val"></h4>
-        <br>
-        <h4 class="lead" >We will be coming for the inspection on :</h4>
-        <br>
-        <h4 class="lead" id="date_time_val"></h4>
+<main class="jumbotron jumbotron-fluid">
+    <div class="text-center ">
+        <div class="form-group">
+            <h1 class="display-4">Thank You!</h1>
+        </div>
 
+
+        <div class="form-group">
+            <h4 class="lead">Reference Number :
+                <br/>
+                <span id="reference_val"></span>
+            </h4>
+        </div>
+
+        <div class="form-group">
+            <h4 class="lead">A confirmation email has been sent to:
+                <br/>
+                <span id="email_val"></span>
+            </h4>
+        </div>
+
+        <div class="form-group">
+            <h4 class="lead">We will be coming for the inspection on :
+                <br/>
+                <span id="date_time_val"></span>
+            </h4>
+        </div>
     </div>
-
+</main>
 <script>
- var appendClientData = function () {
+
+    $(document).ready(function () {
+
+        var appendClientData = function () {
             var thanks = $.parseJSON(window.localStorage.getItem("thanks_data"));
             if (thanks !== null) {
                 console.log(thanks)
-                $("#email_val").text(thanks["date-time"]);
-                $("#date_time_val").text(thanks["email"]);
+                $("#date_time_val").text(thanks["date-time"]);
+                $("#email_val").text(thanks["email"]);
+                $("#reference_val").text(thanks["reference"])
             } else {
                 console.log("no client data found from local storage, please go fill out the detail request form!")
             }
         };
- appendClientData();
+        appendClientData();
+    });
 </script>
 </body>
 </html>
