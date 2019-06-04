@@ -17,12 +17,37 @@
 
 
 </head>
+<!--NAVIGATION BAR-->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="#">
+        <img src="./assets/valuForceLogo.png" width="178" height="100" class="d-inline-block align-top"
+             alt="http://valueforce.thelearnapp.com/wp-content/uploads/2018/08/Logo_Colour_white-178x100.png">
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+            aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav">
+            <li class="navbar-brand ">
+                <a class="nav-link" href="http://valueforce.thelearnapp.com/">Home </a>
+            </li>
+            <li class="navbar-brand">
+                <a class="nav-link" href="http://valueforce.thelearnapp.com/about-us">About Us</a>
+            </li>
+            <li class="navbar-brand">
+                <a class="nav-link" href="http://valueforce.thelearnapp.com/contact-us">Contact Us</a>
+            </li>
+
+        </ul>
+    </div>
+</nav>
+
 
 <body class="bg-light">
 
 <div class="container">
-    <div class="py-5 text-center">
-        <img class="d-block mx-auto mb-4" src="https://getbootstrap.com/docs/4.0/assets/brand/bootstrap-solid.svg" alt="" width="72" height="72">
+    <div class="py-5 text-center jumbotron">
         <h2>Checkout</h2>
         <p class="lead">Please review your order and add billing information</p>
     </div>
@@ -37,79 +62,79 @@
                 <li class="list-group-item d-flex justify-content-between lh-condensed">
                     <div>
                         <h6 class="my-0" id="reference_label">Reference</h6>
+                        <small class=" col-md-6 text-muted" id="reference_number"></small>
                     </div>
-                    <span class=" col-md-6 text-muted" id="reference_number"></span>
 
                 </li>
 
                 <li class="list-group-item d-flex justify-content-between lh-condensed">
                     <div>
                         <h6 class="my-0" id="address_label">Address</h6>
+                        <small class=" col-md-6 text-muted" id="address_full"></small>
                     </div>
-                    <small class=" col-md-6 text-muted" id="address_full"></small>
 
                 </li>
 
                 <li class="list-group-item d-flex justify-content-between lh-condensed">
                     <div>
                         <h6 class="my-0" id="suffix_label">Street Suffix</h6>
+                        <small class=" col-md-6 text-muted" id="street_suffix"></small>
                     </div>
-                    <span class=" col-md-6 text-muted" id="street_suffix"></span>
 
                 </li>
 
                 <li class="list-group-item d-flex justify-content-between lh-condensed">
                     <div>
                         <h6 class="my-0" id="municipality_label">Municipality</h6>
+                        <small class=" col-md-6 text-muted " id="municipality"></small>
                     </div>
-                    <span class=" col-md-6 text-muted" id="municipality"></span>
 
                 </li>
                 <li class="list-group-item d-flex justify-content-between lh-condensed">
                     <div>
                         <h6 class="my-0" id="client_label">Client Last Name</h6>
+                        <small class=" col-md-6 text-muted " id="client_lastName"></small>
                     </div>
-                    <span class=" col-md-6 text-muted" id="client_lastName"></span>
 
                 </li>
 
                 <li class="list-group-item d-flex justify-content-between lh-condensed">
                     <div>
                         <h6 class="my-0" id="orderby_label">Ordered By</h6>
+                        <small class=" col-md-6 text-muted" id="ordered_by"></small>
                     </div>
-                    <span class=" col-md-6 text-muted" id="ordered_by"></span>
 
                 </li>
 
                 <li class="list-group-item d-flex justify-content-between lh-condensed">
                     <div>
                         <h6 class="my-0" id="email_label">Email</h6>
+                        <small class=" col-md-6 text-muted" id="client_email"></small>
                     </div>
-                    <span class=" col-md-6 text-muted" id="client_email"></span>
 
                 </li>
 
                 <li class="list-group-item d-flex justify-content-between lh-condensed">
                     <div>
                         <h6 class="my-0" id="phone_label">Phone Number</h6>
+                        <small class=" col-md-6 text-muted" id="phone_number"></small>
                     </div>
-                    <span class=" col-md-6 text-muted" id="phone_number"></span>
 
                 </li>
 
                 <li class="list-group-item d-flex justify-content-between lh-condensed">
                     <div>
                         <h6 class="my-0" id="photo_label">Email photos at</h6>
+                        <small class=" col-md-6 text-muted" id="photo_link"></small>
                     </div>
-                    <span class=" col-md-6 text-muted" id="photo_link"></span>
 
                 </li>
 
                 <li class="list-group-item d-flex justify-content-between lh-condensed">
                     <div>
                         <h6 class="my-0" id="datetime_label">Date & Time Selected</h6>
+                        <small class=" col-md-6 text-muted" id="date-time"></small>
                     </div>
-                    <span class=" col-md-6 text-muted" id="date-time"></span>
 
                 </li>
                 <li class="list-group-item d-flex justify-content-between">
@@ -122,7 +147,7 @@
                 <div class="input-group">
                     <input type="text" class="form-control" placeholder="Promo code" id="coupon_code">
                     <div class="input-group-append">
-                        <button id="coupon_button" type="submit" class="btn btn-secondary">Redeem</button>
+                        <input type="button" id="coupon_button" class="btn btn-secondary" value="Redeem"/>
                     </div>
                 </div>
             </form>
